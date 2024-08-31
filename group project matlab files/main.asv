@@ -1,0 +1,21 @@
+tableOfData=readcell("Olympic_data_set.csv");
+% disp(tableOfData);
+
+
+[nRow,nCol]=size(tableOfData);
+% disp(nCol);
+% disp(nRow);
+
+
+goldcount.country='';
+goldcount.numGold=0;
+
+counter=0;
+indexer=1;
+
+for irow=1:nRow
+    if string(tableOfData{irow,15})=="Gold"
+        counter=counter+1;
+    end
+end
+disp("The number of gold won by countries is " + counter);
